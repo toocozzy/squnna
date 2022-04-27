@@ -1,0 +1,26 @@
+.logo {
+  font-size: 2rem;
+  font-family: "Monoton", cursive;
+  color: #fff;
+}
+
+.logo__container {
+  background-color: #000;
+  width: 11rem;
+  text-align: center;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 2;
+  position: absolute;
+}
+
+@media (min-width: 768px) {
+  .logo__container {
+    left: 5rem;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+/*# sourceMappingURL=Logo.css.map */

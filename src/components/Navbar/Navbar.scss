@@ -1,0 +1,63 @@
+@import "../../styles/variables/variables.scss";
+
+.navbar {
+  width: 4rem;
+  height: 100vh;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  overflow: hidden;
+  transition: 0.3s;
+  display: block;
+
+  &:hover {
+    width: 30%;
+  }
+
+  &__links-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+
+    &-icon {
+      margin: 25px 23px;
+    }
+
+    &:hover {
+      background-color: $primaryYellow;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: unset;
+
+    &__link-text {
+      display: none;
+    }
+
+    &__links-container {
+      margin-top: 0;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    &:hover {
+      width: 100%;
+    }
+  }
+}
