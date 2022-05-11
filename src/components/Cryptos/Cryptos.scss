@@ -1,0 +1,58 @@
+@import "../../styles/variables/colors.scss";
+
+.cryptos {
+  position: relative;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  &__overlay {
+    display: none;
+    height: 300px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: linear-gradient(transparent, $bgColor);
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__scroll-to-top {
+    position: fixed;
+    bottom: 15%;
+    right: 5%;
+    border: 2px solid $primaryGray;
+    border-radius: 10px;
+    background-color: $primaryGray;
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+
+@media (min-width: 768px) {
+  .cryptos {
+    &__container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    &__scroll-to-top {
+      right: 15%;
+      bottom: 7%;
+    }
+  }
+}

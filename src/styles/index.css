@@ -9,4 +9,21 @@
 body {
   background-color: #b4b7c0;
 }
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: #b4b7c0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+::-moz-selection {
+  background-color: #dff250;
+}
+
+::selection {
+  background-color: #dff250;
+}
 /*# sourceMappingURL=index.css.map */

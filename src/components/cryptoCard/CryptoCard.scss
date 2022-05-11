@@ -1,0 +1,84 @@
+@import "../../styles/variables/colors.scss";
+
+.crypto-card {
+  border: 2px solid $primaryGray;
+  background-color: $primaryGray;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  list-style: none;
+
+  &__link {
+    color: black;
+    text-decoration: none;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  &__icon {
+    width: 100%;
+
+    &-container {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__name {
+    font-size: 1.15rem;
+    font-weight: bold;
+  }
+
+  &__stats {
+    padding: 10px 0;
+
+    &-item {
+      margin: 5px 0;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+
+      &__value {
+        font-weight: bold;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.arrow-up {
+  color: green;
+  display: none;
+  font-size: 1.2rem;
+}
+
+.arrow-up.active {
+  display: block;
+}
+
+.arrow-down {
+  color: red;
+  display: none;
+  font-size: 1.2rem;
+}
+
+.arrow-down.active {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .crypto-card {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .crypto-card {
+    width: 30%;
+  }
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "../Logo/Logo";
 import Navbar from "../Navbar/Navbar";
+import "../../styles/Layout.css";
 
 const Layout = (props) => {
   return (
@@ -9,7 +10,7 @@ const Layout = (props) => {
         <Logo />
         <Navbar />
       </header>
-      <main>{props.children}</main>
+      <main className="container">{props.children}</main>
     </>
   );
 };

@@ -1,0 +1,91 @@
+.crypto-card {
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  list-style: none;
+}
+
+.crypto-card__link {
+  color: black;
+  text-decoration: none;
+}
+
+.crypto-card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 0;
+}
+
+.crypto-card__icon {
+  width: 100%;
+}
+
+.crypto-card__icon-container {
+  width: 30px;
+  height: 30px;
+}
+
+.crypto-card__name {
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+.crypto-card__stats {
+  padding: 10px 0;
+}
+
+.crypto-card__stats-item {
+  margin: 5px 0;
+  font-size: 0.9rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.crypto-card__stats-item__value {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.arrow-up {
+  color: green;
+  display: none;
+  font-size: 1.2rem;
+}
+
+.arrow-up.active {
+  display: block;
+}
+
+.arrow-down {
+  color: red;
+  display: none;
+  font-size: 1.2rem;
+}
+
+.arrow-down.active {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .crypto-card {
+    width: 45%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .crypto-card {
+    width: 30%;
+  }
+}
+/*# sourceMappingURL=CryptoCard.css.map */
