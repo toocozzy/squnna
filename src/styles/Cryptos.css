@@ -15,7 +15,6 @@
 }
 
 .cryptos__overlay {
-  display: none;
   height: 300px;
   position: absolute;
   bottom: 0;
@@ -23,34 +22,6 @@
   right: 0;
   background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#b4b7c0));
   background-image: linear-gradient(transparent, #b4b7c0);
-}
-
-.cryptos__overlay.active {
-  display: block;
-}
-
-.cryptos__scroll-to-top {
-  position: fixed;
-  bottom: 15%;
-  right: 5%;
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.25);
-  color: white;
-  width: 40px;
-  height: 40px;
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: pointer;
-  z-index: 10;
 }
 
 @media (min-width: 768px) {
@@ -61,12 +32,9 @@
             flex-direction: row;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .cryptos__scroll-to-top {
-    right: 15%;
-    bottom: 7%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 /*# sourceMappingURL=Cryptos.css.map */

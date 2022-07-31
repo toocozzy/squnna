@@ -1,0 +1,81 @@
+.cryptopage__heading {
+  font-size: 1.5rem;
+}
+
+.cryptopage__search {
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.25);
+  height: 40px;
+  width: 40px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  overflow: hidden;
+  padding: 0 10px;
+  margin: 20px 0;
+}
+
+.cryptopage__search-icon {
+  color: white;
+  margin: 0 1px;
+  cursor: pointer;
+}
+
+.cryptopage__search.active {
+  width: 100%;
+}
+
+.cryptopage__search-input {
+  width: 80%;
+  height: 100%;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.cryptopage__search:hover {
+  cursor: pointer;
+}
+
+.cryptopage__scroll-to-top {
+  position: fixed;
+  bottom: 15%;
+  right: 5%;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .cryptopage__scroll-to-top {
+    right: 15%;
+    bottom: 7%;
+  }
+  .cryptopage__search.active {
+    width: 30%;
+  }
+}
+/*# sourceMappingURL=Cryptopage.css.map */

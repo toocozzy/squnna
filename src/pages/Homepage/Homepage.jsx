@@ -2,28 +2,26 @@ import React from "react";
 import millify from "millify";
 import "../../styles/Homepage.css";
 import { useGetCryptosQuery } from "../../services/cryptoApi";
+import { Link } from "react-router-dom";
 import Cryptos from "../../components/Cryptos/Cryptos";
-import { useDispatch, useSelector } from "react-redux";
-import { uiActions } from "../../app/store/uiSlice";
 import { defaultNumberOfTopCoins } from "../../app/store/uiSlice";
+import { useLocation } from "react-router-dom";
+import Loader from "../../components/Loader/Loader";
 
 const Homepage = () => {
+  const location = useLocation();
   const { data, isFetching } = useGetCryptosQuery();
-  const dispatch = useDispatch();
-  const isCoinsListExtended = useSelector(
-    (state) => state.ui.isCoinsListExtended
-  );
 
   const globalStats = data?.data?.stats;
+  const coins = data?.data?.coins;
 
-  const switchTopCoinsHandler = () => {
-    dispatch(uiActions.toggleCoinsRanking());
+  let topCoins;
 
-    window.scrollTo({
-      top: 1000,
-      behavior: "smooth",
-    });
-  };
+  if (location.pathname === "/cryptos") {
+    topCoins = coins?.slice(0, defaultNumberOfTopCoins);
+  } else {
+    topCoins = coins?.slice(0, defaultNumberOfTopCoins);
+  }
 
   let reducedNumberOfCoins;
 
@@ -33,19 +31,7 @@ const Homepage = () => {
     reducedNumberOfCoins = 1;
   }
 
-  if (isFetching)
-    return (
-      <div class="lds-roller">
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    );
+  if (isFetching) return <Loader />;
 
   return (
     <div className="homepage">
@@ -86,21 +72,14 @@ const Homepage = () => {
       </div>
       <div className="homepage__heading-container">
         <h1 className="stats__heading">
-          Top{" "}
-          {isCoinsListExtended
-            ? "50"
-            : defaultNumberOfTopCoins - reducedNumberOfCoins}{" "}
-          Cryptos
+          Top {defaultNumberOfTopCoins - reducedNumberOfCoins} Cryptos
         </h1>
-        <button
-          className="homepage__heading-link"
-          onClick={switchTopCoinsHandler}
-        >
-          show {isCoinsListExtended ? "less" : "more"}
+        <Link to="/cryptos" className="homepage__heading-link">
+          show more
           <i className="ri-more-fill link_icon"></i>
-        </button>
+        </Link>
       </div>
-      <Cryptos />
+      <Cryptos coinsRanking={topCoins} />
     </div>
   );
 };

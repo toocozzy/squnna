@@ -1,0 +1,78 @@
+@import "../../styles/variables/colors.scss";
+
+.cryptopage {
+  &__heading {
+    font-size: 1.5rem;
+  }
+
+  &__search {
+    border: 2px solid $primaryGray;
+    background-color: $primaryGray;
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+    overflow: hidden;
+    padding: 0 10px;
+    margin: 20px 0;
+
+    &-icon {
+      color: white;
+      margin: 0 1px;
+      cursor: pointer;
+    }
+
+    &.active {
+      width: 100%;
+    }
+
+    &-input {
+      width: 80%;
+      height: 100%;
+      outline: none;
+      background-color: transparent;
+      border: none;
+      padding: 0 10px;
+      font-weight: bold;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__scroll-to-top {
+    position: fixed;
+    bottom: 15%;
+    right: 5%;
+    border: 2px solid $primaryGray;
+    border-radius: 10px;
+    background-color: $primaryGray;
+    color: white;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+
+@media (min-width: 768px) {
+  .cryptopage {
+    &__scroll-to-top {
+      right: 15%;
+      bottom: 7%;
+    }
+
+    &__search {
+      &.active {
+        width: 30%;
+      }
+    }
+  }
+}
