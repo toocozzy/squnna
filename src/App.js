@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Homepage from "./pages/Homepage/Homepage";
 import Cryptopage from "./pages/Cryptopage/Cryptopage";
 import Newspage from "./pages/Newspage/Newspage";
+import Exchangespage from "./pages/Exchangespage/Exchangespage";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/home" element={<Homepage />} />
         <Route path="/cryptos" element={<Cryptopage />} />
         <Route path="/news" element={<Newspage />} />
+        <Route path="/exchanges" element={<Exchangespage />} />
       </Routes>
     </Layout>
   );
