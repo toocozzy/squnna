@@ -39,6 +39,8 @@
 
 Squnna is the React App which will help you learn more about the cryptocurrencies world.
 
+Please note that the app is in the early stage of development and a lot of new features and fixes will be added soon.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
