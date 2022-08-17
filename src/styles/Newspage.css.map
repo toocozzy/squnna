@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACG,AAAD,kBAAU,CAAC;EACT,SAAS,EAAE,MAAM;EACjB,MAAM,EAAE,MAAM;CACf",
+    "sources": [
+        "../pages/Newspage/Newspage.scss"
+    ],
+    "names": [],
+    "file": "Newspage.css"
+}

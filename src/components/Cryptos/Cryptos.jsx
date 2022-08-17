@@ -1,15 +1,9 @@
 import React from "react";
 import CryptoCard from "../cryptoCard/CryptoCard";
 import "../../styles/Cryptos.css";
-import { useSelector } from "react-redux";
-import { useLocation } from "react-router-dom";
+import Overlay from "../Overlay/Overlay";
 
 const Cryptos = ({ coinsRanking }) => {
-  const location = useLocation();
-  const isCoinsListExtended = useSelector(
-    (state) => state.ui.isCoinsListExtended
-  );
-
   return (
     <div className="cryptos">
       <ul className="cryptos__container">
@@ -25,14 +19,7 @@ const Cryptos = ({ coinsRanking }) => {
           />
         ))}
       </ul>
-      {location.pathname === "/cryptos" ||
-        (!isCoinsListExtended && (
-          <div
-            className={`cryptos__overlay ${
-              isCoinsListExtended ? "" : "active"
-            }`}
-          ></div>
-        ))}
+      <Overlay />
     </div>
   );
 };

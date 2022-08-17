@@ -1,0 +1,26 @@
+@import "../../styles/variables/colors.scss";
+
+.totopbtn {
+  position: fixed;
+  bottom: 15%;
+  right: 5%;
+  border: 2px solid $primaryGray;
+  border-radius: 10px;
+  background-color: $primaryGray;
+  color: white;
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .totopbtn {
+    right: 15%;
+    bottom: 7%;
+  }
+}

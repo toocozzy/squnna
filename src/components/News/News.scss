@@ -1,6 +1,6 @@
 @import "../../styles/variables/colors.scss";
 
-.cryptos {
+.news {
   position: relative;
 
   &__container {
@@ -11,7 +11,7 @@
 }
 
 @media (min-width: 768px) {
-  .cryptos {
+  .news {
     &__container {
       flex-direction: row;
       flex-wrap: wrap;

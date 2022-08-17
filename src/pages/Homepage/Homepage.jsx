@@ -4,9 +4,9 @@ import "../../styles/Homepage.css";
 import { useGetCryptosQuery } from "../../services/cryptoApi";
 import { Link } from "react-router-dom";
 import Cryptos from "../../components/Cryptos/Cryptos";
-import { defaultNumberOfTopCoins } from "../../app/store/uiSlice";
 import { useLocation } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
+import News from "../../components/News/News";
 
 const Homepage = () => {
   const location = useLocation();
@@ -14,6 +14,8 @@ const Homepage = () => {
 
   const globalStats = data?.data?.stats;
   const coins = data?.data?.coins;
+
+  const defaultNumberOfTopCoins = window.innerWidth > 991 ? 18 : 6;
 
   let topCoins;
 
@@ -80,6 +82,15 @@ const Homepage = () => {
         </Link>
       </div>
       <Cryptos coinsRanking={topCoins} />
+      <div className="homepage__heading-container">
+        <h1 className="stats__heading">Latest news</h1>
+        <Link to="/news" className="homepage__heading-link">
+          show more
+          <i className="ri-more-fill link_icon"></i>
+        </Link>
+      </div>
+
+      <News />
     </div>
   );
 };

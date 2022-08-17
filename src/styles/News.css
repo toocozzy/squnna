@@ -1,8 +1,8 @@
-.cryptos {
+.news {
   position: relative;
 }
 
-.cryptos__container {
+.news__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,7 +15,7 @@
 }
 
 @media (min-width: 768px) {
-  .cryptos__container {
+  .news__container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -27,4 +27,4 @@
             justify-content: space-between;
   }
 }
-/*# sourceMappingURL=Cryptos.css.map */
+/*# sourceMappingURL=News.css.map */

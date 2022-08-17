@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Cryptos from "../../components/Cryptos/Cryptos";
+import ToTopBtn from "../../components/ToTopBtn/ToTopBtn";
 import { useGetCryptosQuery } from "../../services/cryptoApi";
 import "../../styles/Cryptopage.css";
+import Loader from "../../components/Loader/Loader";
 
 const Cryptopage = () => {
-  const { data } = useGetCryptosQuery();
+  const { data, isFetching } = useGetCryptosQuery();
   const coins = data?.data?.coins;
   const [isSearching, setIsSearching] = useState(false);
   const [topCoins, setTopCoins] = useState();
-  const [scrollBtnIsShown, setScrollBtnIsShown] = useState(false);
   const [searchCoin, setSearchCoin] = useState("");
 
   const filteredCoins = coins?.filter((item) =>
@@ -23,23 +24,6 @@ const Cryptopage = () => {
     }
   }, [searchCoin, coins, filteredCoins]);
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 1000) {
-        setScrollBtnIsShown(true);
-      } else {
-        setScrollBtnIsShown(false);
-      }
-    });
-  }, []);
-
-  const goToTopHandler = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   const startSearchingHandler = () => {
     setIsSearching(true);
   };
@@ -51,6 +35,8 @@ const Cryptopage = () => {
   const searchCryptosHandler = (e) => {
     setSearchCoin(e.target.value);
   };
+
+  if (isFetching) return <Loader />;
 
   return (
     <div className="cryptopage">
@@ -70,14 +56,7 @@ const Cryptopage = () => {
       </div>
       {filteredCoins.length === 0 && <p>Nothing was found</p>}
       <Cryptos coinsRanking={topCoins} />
-      {scrollBtnIsShown && (
-        <button
-          className="cryptopage__scroll-to-top"
-          onClick={() => goToTopHandler()}
-        >
-          <i className="ri-arrow-up-s-fill"></i>
-        </button>
-      )}
+      <ToTopBtn />
     </div>
   );
 };

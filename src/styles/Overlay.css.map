@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,QAAQ,CAAC;EACP,MAAM,EAAE,KAAK;EACb,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,CAAC;EACT,IAAI,EAAE,CAAC;EACP,KAAK,EAAE,CAAC;EACR,gBAAgB,EAAE,qCAAsC;CACzD",
+    "sources": [
+        "../components/Overlay/Overlay.scss",
+        "variables/colors.scss"
+    ],
+    "names": [],
+    "file": "Overlay.css"
+}

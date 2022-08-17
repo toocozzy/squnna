@@ -45,35 +45,7 @@
   cursor: pointer;
 }
 
-.cryptopage__scroll-to-top {
-  position: fixed;
-  bottom: 15%;
-  right: 5%;
-  border: 2px solid rgba(255, 255, 255, 0.25);
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.25);
-  color: white;
-  width: 40px;
-  height: 40px;
-  font-size: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: pointer;
-  z-index: 10;
-}
-
 @media (min-width: 768px) {
-  .cryptopage__scroll-to-top {
-    right: 15%;
-    bottom: 7%;
-  }
   .cryptopage__search.active {
     width: 30%;
   }
