@@ -8,11 +8,18 @@ const NewsCard = ({ news }) => {
       <a href={news.url} target="_blank" rel="noreferrer">
         <div className="news-card__container">
           <div className="news-card__img-overlay">
-            <img
-              src={news?.image?.thumbnail?.contentUrl || Placeholder}
-              className="news-card__img"
-              alt={news.name}
-            />
+            <div
+              className={
+                news?.image?.thumbnail?.contentUrl
+                  ? "news-card__img"
+                  : "news-card__img news-card__img-noblur"
+              }
+              style={{
+                backgroundImage: `url(${
+                  news?.image?.thumbnail?.contentUrl || Placeholder
+                })`,
+              }}
+            ></div>
           </div>
           <div className="news-card__text-container">
             <p className="news-card__name">{news.name}</p>

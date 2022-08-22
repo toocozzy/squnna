@@ -10,14 +10,22 @@
   }
 
   &__img {
-    width: 100%;
-    object-fit: fill;
     position: relative;
     z-index: -1;
+    min-height: 300px;
+    min-width: 280px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: blur(1.5px);
 
     &-overlay {
       height: 100%;
       background-color: rgba(0, 0, 0, 0.55);
+    }
+
+    &-noblur {
+      filter: unset;
     }
   }
 

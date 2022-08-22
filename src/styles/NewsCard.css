@@ -11,16 +11,25 @@
 }
 
 .news-card__img {
-  width: 100%;
-  -o-object-fit: fill;
-     object-fit: fill;
   position: relative;
   z-index: -1;
+  min-height: 300px;
+  min-width: 280px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-filter: blur(1.5px);
+          filter: blur(1.5px);
 }
 
 .news-card__img-overlay {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.55);
+}
+
+.news-card__img-noblur {
+  -webkit-filter: unset;
+          filter: unset;
 }
 
 .news-card__text-container {
