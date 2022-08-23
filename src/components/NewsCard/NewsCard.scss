@@ -29,6 +29,19 @@
     }
   }
 
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__timestamp {
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin: 5px 0;
+    display: block;
+  }
+
   &__text-container {
     position: absolute;
     color: white;
@@ -38,12 +51,14 @@
     padding: 0 5px;
   }
 
-  &__span {
+  &__link {
     display: flex;
     align-items: center;
     font-weight: normal;
     font-size: 0.9rem;
     margin: 10px 0;
+    color: #fff;
+    text-decoration: none;
 
     &-icon {
       margin-left: 5px;
