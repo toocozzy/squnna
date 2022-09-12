@@ -1,5 +1,6 @@
 .cryptos {
   position: relative;
+  width: 100%;
 }
 
 .cryptos__container {
