@@ -4,8 +4,6 @@ import Placeholder from "../../assets/images/placeholder.png";
 import moment from "moment";
 
 const NewsCard = ({ news }) => {
-  console.log(moment(news.datePublished).startOf("ss").fromNow());
-
   return (
     <li className="news-card">
       <div className="news-card__container">
@@ -35,7 +33,8 @@ const NewsCard = ({ news }) => {
               target="_blank"
               rel="noreferrer"
             >
-              Read more <i class="ri-arrow-right-line news-card__span-icon"></i>
+              Read more{" "}
+              <i className="ri-arrow-right-line news-card__span-icon"></i>
             </a>
           </div>
         </div>

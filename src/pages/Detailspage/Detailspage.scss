@@ -1,0 +1,75 @@
+@import "../../styles/variables/colors.scss";
+
+.detailspage {
+  &__heading {
+    &-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    &__icon {
+      width: 100%;
+
+      &-container {
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &__icon {
+    width: 100%;
+
+    &-container {
+      width: 30px;
+      height: 30px;
+      margin-left: 5px;
+    }
+  }
+
+  &__stats {
+    width: 100%;
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__stats-item {
+    border-bottom: 1px solid $primaryGray;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+
+    &-title {
+      display: flex;
+      align-items: center;
+    }
+
+    &-icon {
+      margin-right: 5px;
+    }
+
+    &-value {
+      font-weight: bold;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .detailspage {
+    &__stats {
+      width: 47%;
+
+      &-container {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+  }
+}

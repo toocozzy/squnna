@@ -16,6 +16,7 @@ const Cryptos = ({ coinsRanking }) => {
             marketCap={crypto.marketCap}
             dailyChange={crypto.change}
             key={crypto.name}
+            id={crypto.uuid}
           />
         ))}
       </ul>

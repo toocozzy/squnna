@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const CryptoCard = (props) => {
   return (
     <li className="crypto-card">
-      <Link className="crypto-card__link" to="/">
+      <Link className="crypto-card__link" to={`/details/${props.id}`}>
         <div className="crypto-card__header">
           <p className="crypto-card__name">
             {props.rank}. {props.name}
